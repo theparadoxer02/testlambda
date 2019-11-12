@@ -1,9 +1,16 @@
+language:
+  python
+sudo: false
+python:
+- '3.7'
 deploy:
   provider: lambda
-  function_name: "helloworld"
-  region: "us-east-1"
+  function_name: helloworld
+  region: us-east-1
   role: arn:aws:iam::887588581857:role/service-role/helloworld2-role-1t6uuk0c
-  runtime: "python3.7"
-  handler_name: "lambda_handler"
+  runtime: python3.7
+  handler_name: lambda_handler
   on:
     branch: master
+  secret_access_key:
+    secure: RhjSSCkuExWiW+Iukaz9r1SpmCZCLhb6rzqhe/PfBlGUFAuMf4eCRYHio+p/oY3LGB4JkJy+nbL0ZVp/H+3Nomd+k5vhlJS7gGeFfPARTlMJnk2ftVVv8LGOe53Od960nyvol7TRpg31QJI+DwSw52DC5YpyDly6VlQOU7ZfBzy7zsgI6ALGsPY6OotTj9UYqZidmalCRA6b9iRFm9VImtCCmnjHe0ZDt94klW+rnvBQKtwiFEed18RDkTwAi3g/3WTiCRkM2imqvhvBLIWDt/WT0w7vf9ERWm6OWXoDOpLtJSA7lHdS7c8QlWsICbajbplRTB01wC71L1vecXJLT+79TCBm+xhTi+9tveE7c/V8EHxgmnqFuohbXC5RAG4fxwsGHvguCPF4Ss53wD2YrlyH7Q6wMf3g4pjQcVmCORYHXG9+ZJQoMoryR/Wy618eAE9kiEzpIRmTm1JdUUDi7JoHB5JWNe3CgU91cwZruzg4yKxv1QRltGO89AkchleKGiewU8gsiaRIUQXcagmIH/NdCjNKqoF0FEL4K1VthsiJR5YJ7ZMGPHhgj/0aRlu5LlTm7Cy/CAFO7JhhU0L62ZG72IHUfObdI04F1oiw0Ngucgu36aPNo8iDK9G6sSxF/Pp2St74k9raDqAznxXef+YbJVeZp/qANGHHhWcT2t0=
