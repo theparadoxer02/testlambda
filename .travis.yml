@@ -3,6 +3,8 @@ language:
 sudo: false
 python:
 - '3.7'
+install:
+  - pip install -r requirements.txt
 deploy:
   provider: lambda
   function_name: helloworld
