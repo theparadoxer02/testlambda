@@ -5,6 +5,8 @@ python:
 - '3.7'
 install:
   - pip install -r requirements.txt
+script:
+  - flake8 .
 deploy:
   provider: lambda
   function_name: helloworld
@@ -14,5 +16,3 @@ deploy:
   handler_name: lambda_handler
   on:
     branch: master
-  secret_access_key:
-    secure: yhDQfAzSi5W3ruljXlEkxCCAj89OQHHtTlXyFh1F
