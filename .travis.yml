@@ -1,0 +1,7 @@
+deploy:
+  provider: lambda
+  function_name: "helloworld"
+  region: "us-east-1"
+  role: arn:aws:iam::887588581857:role/service-role/helloworld2-role-1t6uuk0c
+  runtime: "python3.7"
+  handler_name: "lambda_handler"
